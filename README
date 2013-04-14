@@ -1,4 +1,20 @@
 
 Reprap_KTY-84-130 - support files for using the KTY 84-130 temperature sensor with reprap 3d printer
 
+The KTY 84-130 temperature sensor is a temperature sensor rated up to 300 ° C which I wanted to use as a replacement for the standard 100k thermistors used in repraps.
+
+The resistance values are taken from the datasheet and the thermistor table created a python skript, which I will add once I have cleaned it up a little bit.
+
+
+
+Usage:
+
+- copy ThermistorTable.h into your firmware build directory
+- edit config.h for your firmware to use the thermistor table
+
+
+Tested with the following firmwares:
+
+- Teacup
+
 
