@@ -5,6 +5,8 @@ The KTY 84-130 temperature sensor is a temperature sensor rated up to 300 ° C w
 
 The resistance values are taken from the datasheet and the thermistor table created a python skript, which I will add once I have cleaned it up a little bit.
 
+The setup right now is the KTY 84-130 connected instead of the 100k Thermistor, ie. the sensor connected between the port pin and ground. Additionally, on the Sanguinololu 1.3a controller board I use, there is a 4.7k pull-up connected to the port pin (which is accounted for in calculating the table values).
+
 
 
 Usage:
