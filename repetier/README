@@ -1,26 +1,30 @@
 
-Reprap_KTY-84-130 - support files for using the KTY 84-130 temperature sensor
-with reprap 3d printer
+usage for repetier firmware: 
+  run python KTY84-130_repetier.py
 
-The KTY 84-130 is a silicon temperatur sensor rated for -40..300°C which I use as 
-a replacement for the standard 100k thermistors used in repraps.
+open repetier firmware Configuration.h in an editor and locate the user 
+thermistor table 1 definitioni (row 418):
 
-The KTY was more readily available for me than the standard 100k reprap
-thermistors. At the german distributor reichelt, where I ordered most of my
-electronic components the 100k thermistor is not available, but the KTY 84-130
-is and is only about 0.77 EUR per piece.
+/** Number of entries in the user thermistortable 1. Set to 0 to disable it. */
+#define NUM_TEMPS_USERTHERMISTOR1 0
+#define USER_THERMISTORTABLE1  {}  
 
-The housing is a SOD68 leaded package with a diameter of 1.6mm which can easily
-be incorporated into the hotend.
+comment these two defines out and insert the output from the python script instead.
 
-This work is based on a python script from
-http://diyhpl.us/reprap/trunk/users/wizard23/python/lookupTables/KTY84-130.py
+now you only need to enable the user thermistor table for your sensors.
 
-adapted by Stemer114 for usage with 4.7k pull-up resistor
-and table format for teacup firmware
+for the extruder hotend, locate appropriate define (here row 180)
 
-usage: 
-  python KTY84-130.py >ThermistorTable.h
+#define EXT0_TEMPSENSOR_TYPE 1
+
+and change it to 51
+
+for the heated bed, locate appropriate define (here row 553)
+
+#define HEATED_BED_SENSOR_TYPE 51
+
+and change it to 51 as well.
+
   copy ThermistorTable.h into your firmware dir
   enable the lookup table in firmware config.h (depends on firmware)
 

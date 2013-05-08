@@ -2,7 +2,7 @@
 #  http://diyhpl.us/reprap/trunk/users/wizard23/python/lookupTables/KTY84-130.py
 #
 # adapted by Stemer114 for usage with 4.7k pull-up resistor
-# and table format for teacup firmware
+# table format for repetier firmware
 # https://github.com/Stemer114/Reprap_KTY-84-130
 # 
 # generates a Lookuptable for the following termistor
@@ -56,19 +56,19 @@ if len(tempValues) != len(resistorValues):
 	print "Length of temValues %d and resistorValues %d does not match" % (len(tempValues), len(resistorValues))
 else:
 	print "// reprap thermistor table for KTY 84-130 temperature sensor"
-	print "// adapted for teacup firmware single table format"
+	print "// adapted for repetier firmware user thermistortable 1 format"
 	print "// for further details see https://github.com/Stemer114/Reprap_KTY-84-130"
 	print ""
-	print "// the following defines need matching settings in config.h of your firmware"
-	print "#define NUMTABLES 1"
-	print "#define THERMISTOR_EXTRUDER 0"
-	print "#define NUMTEMPS %d" % (len(tempValues))
-	print "uint16_t const temptable[NUMTABLES][NUMTEMPS][2] PROGMEM = {"
-	print "{"
+	print "// consult the readme for how to insert the table into"
+	print "// repetier Configuration.h"
+	print "#define NUM_TEMPS_USERTHERMISTOR1 %d" % (len(tempValues))
+	print "#define USER_THERMISTORTABLE1 {\ "
+	suffix = ","
 	for i in range(0, len(tempValues)):
 		current = 5.0/(4700.0+resistorValues[i])
 		voltage = current*resistorValues[i]
 		adValue = round(voltage*1023.0/5.0)
-		print "   {%d, %d},  // %4.2f V | %3d C" % (adValue, tempValues[i]*4, voltage, tempValues[i])
-	print "}"
+		if i == len(tempValues)-1:
+			suffix = ""
+		print "   {%d*4, %d*8}%s \ " % (adValue, tempValues[i], suffix)
 	print "};"
