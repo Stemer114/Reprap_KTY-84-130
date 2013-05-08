@@ -1,9 +1,8 @@
-
 usage for repetier firmware: 
   run python KTY84-130_repetier.py
 
 open repetier firmware Configuration.h in an editor and locate the user 
-thermistor table 1 definitioni (row 418):
+thermistor table 1 definition (row 418):
 
 /** Number of entries in the user thermistortable 1. Set to 0 to disable it. */
 #define NUM_TEMPS_USERTHERMISTOR1 0
@@ -21,7 +20,7 @@ and change it to 51
 
 for the heated bed, locate appropriate define (here row 553)
 
-#define HEATED_BED_SENSOR_TYPE 51
+#define HEATED_BED_SENSOR_TYPE 0
 
 and change it to 51 as well.
 
