@@ -28,6 +28,10 @@ ie. the sensor connected between the port pin and ground. Additionally, on the
 Sanguinololu 1.3a controller board I use, there is a 4.7k pull-up connected to
 the port pin (which is accounted for in calculating the table values).
 
-So far, I have tested the hotend only without filament. The temperature is
-reached and held accordingly without apparent problems.
+So far, the KTY has been tested on a hotend and on the heated bed. 
+
+For the heated bed, it works well. 
+
+For the hotend, it also works, but so far, I have only printed calibration objects (0.5mm thin wall and 20mm cube).
+
 
