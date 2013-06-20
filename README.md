@@ -57,4 +57,8 @@ For both applications, it works well. Besides calibration objects and various sm
 parts for a Mendel90 reprap printer, which will be my second printer.
 
 
+License
+-----
+
+Released under the [MIT License](http://www.opensource.org/licenses/MIT)
 
