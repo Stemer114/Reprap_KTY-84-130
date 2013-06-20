@@ -32,6 +32,7 @@ ie. the sensor connected between the port pin and ground. Additionally, on the
 Sanguinololu 1.3a controller board I use, there is a 4.7k pull-up connected to
 the port pin (which is accounted for in calculating the table values).
 
-So far, I have tested the hotend only without filament. The temperature is
-reached and held accordingly without apparent problems.
+I have been running a self-built hotend with the KTY 84-130 for a couple of 
+weeks now without any problems. I have printed almost all parts for a Mendel90
+which will be my second printer after the Wolfstrap based repstrap.
 
