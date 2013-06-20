@@ -18,10 +18,13 @@ http://diyhpl.us/reprap/trunk/users/wizard23/python/lookupTables/KTY84-130.py
 adapted by Stemer114 for usage with 4.7k pull-up resistor
 and table format for teacup firmware
 
-usage: 
+usage for teacup firmware:
   python KTY84-130.py >ThermistorTable.h
   copy ThermistorTable.h into your firmware dir
   enable the lookup table in firmware config.h (depends on firmware)
+
+usage for Repetier firmware:
+  see folder Repetier
 
 The setup right now is the KTY 84-130 connected instead of the 100k Thermistor,
 ie. the sensor connected between the port pin and ground. Additionally, on the
@@ -30,8 +33,8 @@ the port pin (which is accounted for in calculating the table values).
 
 So far, the KTY has been tested on a hotend and on the heated bed. 
 
-For the heated bed, it works well. 
+For both applications, it works well. Besides calibration objects and various small parts, I have printed nearly all 
+parts for a Mendel90 reprap printer, which will be my second printer.
 
-For the hotend, it also works, but so far, I have only printed calibration objects (0.5mm thin wall and 20mm cube).
 
 
