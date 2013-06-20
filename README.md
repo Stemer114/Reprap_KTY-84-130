@@ -1,9 +1,9 @@
-Reprap_KTY-84-130 - support files for using the KTY 84-130 temperature sensor
-with reprap 3d printer
+Reprap_KTY-84-130
 =====
 
-The KTY 84-130 is a silicon temperature sensor rated for -40..300°C which I use as 
-a replacement for the standard 100k thermistors used in repraps.
+Support files for using the KTY 84-130 temperature sensor with reprap 3d printer
+
+The KTY 84-130 is a silicon temperature sensor rated for -40..300°C which I use as a replacement for the standard 100k thermistors used in repraps.
 
 Motivation
 -----
