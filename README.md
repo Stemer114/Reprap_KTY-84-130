@@ -29,9 +29,9 @@ and table format for teacup firmware
 usage for teacup firmware:
 -----
 
-  python KTY84-130.py >ThermistorTable.h
-  copy ThermistorTable.h into your firmware dir
-  enable the lookup table in firmware config.h (depends on firmware)
+#  python KTY84-130.py >ThermistorTable.h
+#  copy ThermistorTable.h into your firmware dir
+#  enable the lookup table in firmware config.h (depends on firmware)
 
 
 usage for Repetier firmware:
