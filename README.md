@@ -40,7 +40,7 @@ usage for Repetier firmware:
   see folder Repetier
 
 
-Connection the KTY 84-130 to your reprap controller
+Connection of the KTY 84-130 to your reprap controller
 -----
 
 The setup right now is the KTY 84-130 connected instead of the 100k Thermistor,
